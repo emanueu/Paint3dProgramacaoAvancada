@@ -6,6 +6,8 @@
 class PlotterMain: public QWidget {
     Q_OBJECT
 private:
+    int nLinhas = 0, nColunas = 0, nPlanos = 0;
+    int altura, largura;
 
 public:
     explicit PlotterMain(QWidget *parent = nullptr);
@@ -15,6 +17,9 @@ public:
 signals:
 
 public slots:
+    void setNLinhas(int x);
+    void setNColunas(int y);
+    void setNPlanos(int z);
 
 };
 

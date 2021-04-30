@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "dialoginiciar.h"
+#include "plottermain.h"
 #include <QPainter>
 #include <QBrush>
 #include <QPen>
@@ -37,9 +38,15 @@ void MainWindow::on_pushButtonIniciar_clicked()
     DialogIniciar e;
     e.exec();
 
+    PlotterMain a;
+
     nx = e.getNumX();
     ny = e.getNumY();
     nz = e.getNumZ();
+
+    a.setNLinhas(nx);
+    a.setNColunas(ny);
+    a.setNPlanos(nz);
 
     //precisamos retirar um porque a posição máxima do vetor é seu tamanho menos 1
     ui->horizontalSliderX->setMaximum(nx-1);

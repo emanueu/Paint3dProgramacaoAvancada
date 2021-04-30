@@ -22,6 +22,7 @@ void Plotter::paintEvent(QPaintEvent *event){
     painter.setBrush(brush);
     painter.setPen(pen);
     painter.drawRect(0,0,width(),height());
+
 }
 
 void Plotter::setColorRed(int _r)
